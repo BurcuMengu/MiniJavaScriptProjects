@@ -1,0 +1,24 @@
+const prompt = require("prompt-sync")();
+
+const answer = prompt("Would you like to play (y/n)? ");
+
+if ( answer.toLowerCase() === "y") {
+    const answer2 = prompt("Would you like to go left or go right (left/right)? ");
+
+    if( answer2.toLowerCase() === "left") {
+        console.log("Oops, you left and fall of a bridge! You lost!");
+    } else {
+        //right
+        console.log("Nice! You go right and approach a bridge...")
+        const answer3 = prompt("Would you like cross the bridge, or turn around and find another way (cross/turn)? ");
+        
+        if ( answer3.toLowerCase() === "cross") {
+            console.log("You cross the brdige and reach the end of the game!");
+        } else {
+            console.log("You turn back and trip on log and hurt your leg. You lose.");
+        }
+    }
+
+} else {
+    console.log("That's too bad!");
+}
